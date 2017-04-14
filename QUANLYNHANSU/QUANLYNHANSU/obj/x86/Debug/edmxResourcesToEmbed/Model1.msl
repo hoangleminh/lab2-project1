@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanlynhansuModelStoreContainer" CdmEntityContainer="QuanlynhansuEntities">
+    <EntitySetMapping Name="NHANSUs">
+      <EntityTypeMapping TypeName="QuanlynhansuModel.NHANSU">
+        <MappingFragment StoreEntitySet="NHANSU">
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="maso" ColumnName="maso" />
+          <ScalarProperty Name="quequan" ColumnName="quequan" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

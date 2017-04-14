@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanlynhansuModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="QuanlynhansuModelStoreContainer">
+          <EntitySet Name="NHANSU" EntityType="QuanlynhansuModel.Store.NHANSU" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="NHANSU">
+          <Key>
+            <PropertyRef Name="maso" />
+          </Key>
+          <Property Name="ten" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="maso" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="quequan" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ngaysinh" Type="date" Nullable="false" />
+          <Property Name="gioitinh" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="sdt" Type="nchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanlynhansuModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="QuanlynhansuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NHANSUs" EntityType="QuanlynhansuModel.NHANSU" />
+        </EntityContainer>
+        <EntityType Name="NHANSU">
+          <Key>
+            <PropertyRef Name="maso" />
+          </Key>
+          <Property Name="ten" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="maso" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="quequan" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ngaysinh" Type="DateTime" Nullable="false" />
+          <Property Name="gioitinh" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="sdt" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanlynhansuModelStoreContainer" CdmEntityContainer="QuanlynhansuEntities">
+          <EntitySetMapping Name="NHANSUs">
+            <EntityTypeMapping TypeName="QuanlynhansuModel.NHANSU">
+              <MappingFragment StoreEntitySet="NHANSU">
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="maso" ColumnName="maso" />
+                <ScalarProperty Name="quequan" ColumnName="quequan" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+                <ScalarProperty Name="sdt" ColumnName="sdt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="QuanlynhansuModel.NHANSU" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
